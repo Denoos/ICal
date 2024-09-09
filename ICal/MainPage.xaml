@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ICal"
+             x:Class="ICal.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="Margin" Value="2"/>
+                <Setter Property="Background" Value="DarkGray"/>
+            </Style>
+
+            <Style x:Key="NumButton" TargetType="Button">
+                <Setter Property="Margin" Value="2"/>
+                <Setter Property="Background" Value="Gray"/>
+            </Style>
+
+            <Style x:Key="RedBut" TargetType="Button">
+                <Setter Property="Margin" Value="2"/>
+                <Setter Property="Background" Value="DeepPink"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid BackgroundColor="Black">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        
+        <StackLayout Grid.Column="0" HeightRequest="200" WidthRequest="350" Orientation="Horizontal" Margin="15, 10, 15, 0">
+            <Button HeightRequest="50" WidthRequest="50" Text="⚙️"/>
+            <Label Text="0" FontSize="20" TextColor="White" HeightRequest="200" WidthRequest="270" VerticalTextAlignment="Center" HorizontalTextAlignment="End" MaximumHeightRequest="200" MaximumWidthRequest="270"/>
+        </StackLayout>
+
+        <Grid Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Row="0" Grid.Column="0" Text="%" Style="{StaticResource ButtonStyle}" />
+            <Button Grid.Row="0" Grid.Column="1" Text="CE" Style="{StaticResource ButtonStyle}" />
+            <Button Grid.Row="0" Grid.Column="2" Text="C" Style="{StaticResource ButtonStyle}" />
+            <Button Grid.Row="0" Grid.Column="3" Text="←" FontSize="25"  Style="{StaticResource ButtonStyle}" />
+                                                
+            <Button Grid.Row="1" Grid.Column="0" Text="1/x" Style="{StaticResource ButtonStyle}" />
+            <Button Grid.Row="1" Grid.Column="1" Text="x^2" Style="{StaticResource ButtonStyle}" />
+            <Button Grid.Row="1" Grid.Column="2" Text="√x" Style="{StaticResource ButtonStyle}" />
+            <Button Grid.Row="1" Grid.Column="3" Text="/" Style="{StaticResource ButtonStyle}" />
+                                                
+            <Button Grid.Row="2" Grid.Column="0" Text="7" Style="{StaticResource NumButton}" />
+            <Button Grid.Row="2" Grid.Column="1" Text="8" Style="{StaticResource NumButton}" />
+            <Button Grid.Row="2" Grid.Column="2" Text="9" Style="{StaticResource NumButton}" />
+            <Button Grid.Row="2" Grid.Column="3" Text="X" Style="{StaticResource ButtonStyle}" />
+                                                
+            <Button Grid.Row="3" Grid.Column="0" Text="4" Style="{StaticResource NumButton}" />
+            <Button Grid.Row="3" Grid.Column="1" Text="5" Style="{StaticResource NumButton}" />
+            <Button Grid.Row="3" Grid.Column="2" Text="6" Style="{StaticResource NumButton}" />
+            <Button Grid.Row="3" Grid.Column="3" Text="-" Style="{StaticResource ButtonStyle}" />
+                                                
+            <Button Grid.Row="4" Grid.Column="0" Text="1" Style="{StaticResource NumButton}" />
+            <Button Grid.Row="4" Grid.Column="1" Text="2" Style="{StaticResource NumButton}" />
+            <Button Grid.Row="4" Grid.Column="2" Text="3" Style="{StaticResource NumButton}" />
+            <Button Grid.Row="4" Grid.Column="3" Text="+" Style="{StaticResource ButtonStyle}" />
+                                                
+            <Button Grid.Row="5" Grid.Column="0" Text="-(X)" Style="{StaticResource NumButton}" />
+            <Button Grid.Row="5" Grid.Column="1" Text="0" Style="{StaticResource NumButton}" />
+            <Button Grid.Row="5" Grid.Column="2" Text="," Style="{StaticResource NumButton}" />
+            <Button Grid.Row="5" Grid.Column="3" Text="=" Style="{StaticResource RedBut}" />
+        </Grid>
+
+    </Grid>
+
+</ContentPage>
