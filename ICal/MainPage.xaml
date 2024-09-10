@@ -32,7 +32,7 @@
         
         <StackLayout Grid.Column="0" HeightRequest="200" WidthRequest="350" Orientation="Horizontal" Margin="15, 10, 15, 0">
             <Button HeightRequest="50" WidthRequest="50" Text="⚙️"/>
-            <Label Text="0" FontSize="30" TextColor="White" HeightRequest="200" WidthRequest="270" VerticalTextAlignment="Center" HorizontalTextAlignment="End" MaximumHeightRequest="200" MaximumWidthRequest="270"/>
+            <Label x:Name="Resultat" FontSize="30" TextColor="White" HeightRequest="200" WidthRequest="270" VerticalTextAlignment="Center" HorizontalTextAlignment="End" MaximumHeightRequest="200" MaximumWidthRequest="270"/>
         </StackLayout>
 
         <Grid Grid.Row="1">

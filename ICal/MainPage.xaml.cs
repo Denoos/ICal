@@ -4,12 +4,20 @@ namespace ICal
 {
     public partial class MainPage : ContentPage
     {
-
-        long result = 0;
+        int currentNum = 0;
+        string result = "0";
+        string currentDoing = "";
 
         public MainPage()
         {
             InitializeComponent();
+            Style();
+        }
+
+        public void Style()
+        {
+            Resultat.Text = result;
+            SemanticScreenReader.Announce(Resultat.Text);
         }
 
         private void PercentBtn_Clicked(object sender, EventArgs e)
@@ -24,17 +32,30 @@ namespace ICal
 
         private void CBtn_Clicked(object sender, EventArgs e)
         {
+            result = "0";
+            currentDoing = "";
+            currentNum = 0;
 
+            Style();
         }
 
         private void BackBtn_Clicked(object sender, EventArgs e)
         {
+            if (result.Length != 1)
+                result.Remove(result.Length - 1);
+            else result = "0";
 
+            Style();
         }
 
         private void ReverseBtn_Clicked(object sender, EventArgs e)
         {
+            currentNum = currentNum * (-1);
+            if (result.StartsWith("-"))
+                result.Remove(0, 1);
+            else result = "-" + result;
 
+            Style();
         }
 
         private void PowerBtn_Clicked(object sender, EventArgs e)
