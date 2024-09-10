@@ -32,7 +32,7 @@
         
         <StackLayout Grid.Column="0" HeightRequest="200" WidthRequest="350" Orientation="Horizontal" Margin="15, 10, 15, 0">
             <Button HeightRequest="50" WidthRequest="50" Text="⚙️"/>
-            <Label Text="0" FontSize="20" TextColor="White" HeightRequest="200" WidthRequest="270" VerticalTextAlignment="Center" HorizontalTextAlignment="End" MaximumHeightRequest="200" MaximumWidthRequest="270"/>
+            <Label Text="0" FontSize="30" TextColor="White" HeightRequest="200" WidthRequest="270" VerticalTextAlignment="Center" HorizontalTextAlignment="End" MaximumHeightRequest="200" MaximumWidthRequest="270"/>
         </StackLayout>
 
         <Grid Grid.Row="1">
@@ -53,35 +53,35 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Button Grid.Row="0" Grid.Column="0" Text="%" Style="{StaticResource ButtonStyle}" />
-            <Button Grid.Row="0" Grid.Column="1" Text="CE" Style="{StaticResource ButtonStyle}" />
-            <Button Grid.Row="0" Grid.Column="2" Text="C" Style="{StaticResource ButtonStyle}" />
-            <Button Grid.Row="0" Grid.Column="3" Text="←" FontSize="25"  Style="{StaticResource ButtonStyle}" />
-                                                
-            <Button Grid.Row="1" Grid.Column="0" Text="1/x" Style="{StaticResource ButtonStyle}" />
-            <Button Grid.Row="1" Grid.Column="1" Text="x^2" Style="{StaticResource ButtonStyle}" />
-            <Button Grid.Row="1" Grid.Column="2" Text="√x" Style="{StaticResource ButtonStyle}" />
-            <Button Grid.Row="1" Grid.Column="3" Text="/" Style="{StaticResource ButtonStyle}" />
-                                                
-            <Button Grid.Row="2" Grid.Column="0" Text="7" Style="{StaticResource NumButton}" />
-            <Button Grid.Row="2" Grid.Column="1" Text="8" Style="{StaticResource NumButton}" />
-            <Button Grid.Row="2" Grid.Column="2" Text="9" Style="{StaticResource NumButton}" />
-            <Button Grid.Row="2" Grid.Column="3" Text="X" Style="{StaticResource ButtonStyle}" />
-                                                
-            <Button Grid.Row="3" Grid.Column="0" Text="4" Style="{StaticResource NumButton}" />
-            <Button Grid.Row="3" Grid.Column="1" Text="5" Style="{StaticResource NumButton}" />
-            <Button Grid.Row="3" Grid.Column="2" Text="6" Style="{StaticResource NumButton}" />
-            <Button Grid.Row="3" Grid.Column="3" Text="-" Style="{StaticResource ButtonStyle}" />
-                                                
-            <Button Grid.Row="4" Grid.Column="0" Text="1" Style="{StaticResource NumButton}" />
-            <Button Grid.Row="4" Grid.Column="1" Text="2" Style="{StaticResource NumButton}" />
-            <Button Grid.Row="4" Grid.Column="2" Text="3" Style="{StaticResource NumButton}" />
-            <Button Grid.Row="4" Grid.Column="3" Text="+" Style="{StaticResource ButtonStyle}" />
-                                                
-            <Button Grid.Row="5" Grid.Column="0" Text="-(X)" Style="{StaticResource NumButton}" />
-            <Button Grid.Row="5" Grid.Column="1" Text="0" Style="{StaticResource NumButton}" />
-            <Button Grid.Row="5" Grid.Column="2" Text="," Style="{StaticResource NumButton}" />
-            <Button Grid.Row="5" Grid.Column="3" Text="=" Style="{StaticResource RedBut}" />
+            <Button Clicked="PercentBtn_Clicked" x:Name="PercentBtn" Grid.Row="0" Grid.Column="0" Text="%" Style="{StaticResource ButtonStyle}" />
+            <Button Clicked="CeBtn_Clicked" x:Name="CeBtn" Grid.Row="0" Grid.Column="1" Text="CE" Style="{StaticResource ButtonStyle}" />
+            <Button Clicked="CBtn_Clicked" x:Name="CBtn" Grid.Row="0" Grid.Column="2" Text="C" Style="{StaticResource ButtonStyle}" />
+            <Button Clicked="BackBtn_Clicked" x:Name="BackBtn" Grid.Row="0" Grid.Column="3" Text="←" FontSize="25"  Style="{StaticResource ButtonStyle}" />
+            
+            <Button Clicked="ReverseBtn_Clicked" x:Name="ReverseBtn" Grid.Row="1" Grid.Column="0" Text="1/x" Style="{StaticResource ButtonStyle}" />
+            <Button Clicked="PowerBtn_Clicked" x:Name="PowerBtn" Grid.Row="1" Grid.Column="1" Text="x^2" Style="{StaticResource ButtonStyle}" />
+            <Button Clicked="AntiPowerBtn_Clicked" x:Name="AntiPowerBtn" Grid.Row="1" Grid.Column="2" Text="√x" Style="{StaticResource ButtonStyle}" />
+            <Button Clicked="DelitBtn_Clicked" x:Name="DelitBtn" Grid.Row="1" Grid.Column="3" Text="/" Style="{StaticResource ButtonStyle}" />
+                  
+            <Button Clicked="SevenBtn_Clicked" x:Name="SevenBtn" Grid.Row="2" Grid.Column="0" Text="7" Style="{StaticResource NumButton}" />
+            <Button Clicked="EightBtn_Clicked" x:Name="EightBtn" Grid.Row="2" Grid.Column="1" Text="8" Style="{StaticResource NumButton}" />
+            <Button Clicked="NineBtn_Clicked" x:Name="NineBtn" Grid.Row="2" Grid.Column="2" Text="9" Style="{StaticResource NumButton}" />
+            <Button Clicked="YmnogitBtn_Clicked" x:Name="YmnogitBtn" Grid.Row="2" Grid.Column="3" Text="X" Style="{StaticResource ButtonStyle}" />
+                  
+            <Button Clicked="FourBtn_Clicked" x:Name="FourBtn" Grid.Row="3" Grid.Column="0" Text="4" Style="{StaticResource NumButton}" />
+            <Button Clicked="FiveBtn_Clicked" x:Name="FiveBtn" Grid.Row="3" Grid.Column="1" Text="5" Style="{StaticResource NumButton}" />
+            <Button Clicked="SixBtn_Clicked" x:Name="SixBtn" Grid.Row="3" Grid.Column="2" Text="6" Style="{StaticResource NumButton}" />
+            <Button Clicked="MinusBtn_Clicked" x:Name="MinusBtn" Grid.Row="3" Grid.Column="3" Text="-" Style="{StaticResource ButtonStyle}" />
+                                             
+            <Button Clicked="OneBtn_Clicked" x:Name="OneBtn" Grid.Row="4" Grid.Column="0" Text="1" Style="{StaticResource NumButton}" />
+            <Button Clicked="TwoBtn_Clicked" x:Name="TwoBtn" Grid.Row="4" Grid.Column="1" Text="2" Style="{StaticResource NumButton}" />
+            <Button Clicked="ThreeBtn_Clicked" x:Name="ThreeBtn" Grid.Row="4" Grid.Column="2" Text="3" Style="{StaticResource NumButton}" />
+            <Button Clicked="PlusBtn_Clicked" x:Name="PlusBtn" Grid.Row="4" Grid.Column="3" Text="+" Style="{StaticResource ButtonStyle}" />
+                                        
+            <Button Clicked="AntiXBtn_Clicked" x:Name="AntiXBtn" Grid.Row="5" Grid.Column="0" Text="-(X)" Style="{StaticResource NumButton}" />
+            <Button Clicked="ZeroBtn_Clicked" x:Name="ZeroBtn" Grid.Row="5" Grid.Column="1" Text="0" Style="{StaticResource NumButton}" />
+            <Button Clicked="DesyatieBtn_Clicked" x:Name="DesyatieBtn" Grid.Row="5" Grid.Column="2" Text="," Style="{StaticResource NumButton}" />
+            <Button Clicked="ResultBtn_Clicked" x:Name="ResultBtn" Grid.Row="5" Grid.Column="3" Text="=" Style="{StaticResource RedBut}" />
         </Grid>
 
     </Grid>
